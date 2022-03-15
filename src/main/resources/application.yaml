@@ -1,0 +1,15 @@
+# TRX波场地址 提现 兑换用
+
+trx:
+  # USDT智能合约地址
+  contractAddress: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+  # 归集地址 ，后台设置
+  gjAddress:
+  # USDT打币地址
+  ownerAddress: TDyB2rpB4wRCRXgZidz1moi8oULF2NBNDu
+  # USDT打币私钥
+  privateKey:
+  # apiKey
+  apiKey: db72fd11-2525-417c-a3b4-d6b4eea5c9b5
+  # 手续费
+  feeLimit: 15000000

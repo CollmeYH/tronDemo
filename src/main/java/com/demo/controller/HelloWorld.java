@@ -45,13 +45,12 @@ public class HelloWorld {
     public void init() {
 
         ApiWrapper apiWrapper = ApiWrapper.ofMainnet("***7b68641c90175286d8c7f2f36948bc5fef1bed0d463a3429d29fbe835932", "5098c5ed-85b2-4e8f-9a3c-d0ad794c42cb");
-
         //合约地址
         Contract contract = apiWrapper.getContract(contractAddress);
         Trc20Contract token = new Trc20Contract(contract, ownerAddr, apiWrapper);
         getBalance(token, ownerAddr);
 
-        String txid = token.transfer("TCxPgSxLmpppAL3nToqYZ2d8gGzjy2FC3z", 1, 5, "memo", 10000000);
+        String txid = token.transfer("TCxPgSxLmpppAL3nToqYZ2d8gGzjy2FC3z", 1, 6, "memo", 10000000);
         log.info("交易id==》{}", txid);
 
         getTransactionById(apiWrapper, txid);
@@ -95,6 +94,7 @@ public class HelloWorld {
 
                 //解析to地址
                 String s1 = Base58Check.bytesToBase58(Hex.decode(ApiWrapper.toHex(ownerAddress)));
+
                 log.info("解析地址：{}", s1);
             }
         } catch (Exception illegalException) {
